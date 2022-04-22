@@ -131,7 +131,7 @@ smtpHost: mail.senseitechnology.co.ke
 smtpPort: 465
 smtpUser: odoo.admin@senseitechnology.co.ke
 smtpPassword: ""
-smtpProtocol: SMTP
+smtpProtocol: tls
 ## @param existingSecret Name of existing secret containing Odoo credentials
 ## NOTE: Must contain key `odoo-password`
 ## NOTE: When it's set, the `odooPassword` parameter is ignored
