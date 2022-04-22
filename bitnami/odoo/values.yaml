@@ -94,7 +94,7 @@ image:
 ## @param odooEmail Odoo user email
 ## ref: https://github.com/bitnami/bitnami-docker-odoo#configuration
 ##
-odooEmail: user@example.com
+odooEmail: odoo.admin@senseitechnology.co.ke
 ## @param odooPassword Odoo user password
 ## Defaults to a random 10-character alphanumeric string if not set
 ## ref: https://github.com/bitnami/bitnami-docker-odoo#configuration
@@ -106,7 +106,7 @@ odooSkipInstall: false
 ## @param loadDemoData Whether to load demo data for all modules during initialization
 ## ref: https://github.com/bitnami/bitnami-docker-odoo#configuration
 ##
-loadDemoData: false
+loadDemoData: true
 ## @param customPostInitScripts Custom post-init.d user scripts
 ## ref: https://github.com/bitnami/bitnami-docker-odoo/tree/master/14.0/debian-10/rootfs/post-init.d
 ## NOTE: supported formats are `.sh`, `.sql` or `.php`
@@ -127,21 +127,21 @@ customPostInitScripts: {}
 ## @param smtpPassword SMTP user password
 ## @param smtpProtocol SMTP protocol
 ##
-smtpHost: ""
-smtpPort: ""
-smtpUser: ""
+smtpHost: mail.senseitechnology.co.ke
+smtpPort: 465
+smtpUser: odoo.admin@senseitechnology.co.ke
 smtpPassword: ""
-smtpProtocol: ""
+smtpProtocol: SMTP
 ## @param existingSecret Name of existing secret containing Odoo credentials
 ## NOTE: Must contain key `odoo-password`
 ## NOTE: When it's set, the `odooPassword` parameter is ignored
 ##
-existingSecret: ""
+existingSecret: odoo-secrets
 ## @param smtpExistingSecret The name of an existing secret with SMTP credentials
 ## NOTE: Must contain key `smtp-password`
 ## NOTE: When it's set, the `smtpPassword` parameter is ignored
 ##
-smtpExistingSecret: ""
+smtpExistingSecret: odoo-secrets
 ## @param allowEmptyPassword Allow the container to be started with blank passwords
 ##
 allowEmptyPassword: false
