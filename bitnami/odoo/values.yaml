@@ -560,7 +560,7 @@ persistence:
   selector: {}
   ## @param persistence.existingClaim The name of an existing PVC to use for persistence
   ##
-  existingClaim: odoo-pv-claim
+  existingClaim: "" #odoo-pv-claim
 
 ## 'volumePermissions' init container parameters
 ## Changes the owner and group of the persistent volume mount point to runAsUser:fsGroup values
