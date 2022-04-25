@@ -646,7 +646,7 @@ postgresql:
     username: bn_odoo
     password: ""
     database: bitnami_odoo
-    existingSecret: ""
+    existingSecret: odoo-secrets
   architecture: standalone
 ## External PostgreSQL configuration
 ## All of these values are only used when postgresql.enabled is set to false
